@@ -11,12 +11,16 @@ public class Device {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int device_id;
-    @Column
+
+    @Column(nullable = false)
     private String device_name;
-    @Column
+
+    @Column(nullable = false)
     private String device_status;
-    @Column
+
+    @Column(nullable = false)
     private String device_model;
+
     @Column
     private Time enrolled_time;
 
