@@ -3,11 +3,12 @@
 Back-end : SpringBoot
 
 Features ;
-  1)  Add a device
-  2)  View all devices
-  3)  View a device by Id
-  4)  Update a device
-  5)  Delete a device
+  1)  Add a device (with id, model, name, status, enrolled time)
+      ** Status should be - "ENROLLED" or "ACTIVE" or "INACTIVE"
+  3)  View all devices
+  4)  View a device by Id
+  5)  Update a device
+  6)  Delete a device
   
 to Run;
 
