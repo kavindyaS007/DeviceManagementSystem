@@ -9,3 +9,11 @@ Features ;
   4)  Update a device
   5)  Delete a device
   
+to Run;
+
+>>git clone https://github.com/kavindyaS007/DeviceManagementSystem.git
+
+Create a database with the name of "deviceDb"
+
+Open the "back-end" folder in an IDE and run
+
