@@ -2,7 +2,6 @@ package com.kavindya.DeviceMngSystem.Controller;
 
 import com.kavindya.DeviceMngSystem.Model.Device;
 import com.kavindya.DeviceMngSystem.Service.DeviceService;
-import com.kavindya.DeviceMngSystem.Service.DeviceServiceOld;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 

@@ -1,6 +1,7 @@
 package com.kavindya.DeviceMngSystem.Service;
 
 import com.kavindya.DeviceMngSystem.DAO.DeviceDAO;
+import com.kavindya.DeviceMngSystem.Exception.DeviceNotFoundException;
 import com.kavindya.DeviceMngSystem.Model.Device;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -31,7 +32,11 @@ public class DeviceServiceImpl implements DeviceService{
         }
         else{
             System.out.println("Id not exists");
-            return null;
+            try {
+                throw new DeviceNotFoundException();
+            } catch (DeviceNotFoundException e) {
+                throw new RuntimeException(e);
+            }
         }
     }
 
