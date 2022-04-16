@@ -1,5 +1,7 @@
 package com.kavindya.DeviceMngSystem.Model;
 
+import com.kavindya.DeviceMngSystem.Model.Enum.Status;
+
 import javax.persistence.*;
 import java.sql.Time;
 
@@ -16,7 +18,8 @@ public class Device {
     private String device_name;
 
     @Column(nullable = false)
-    private String device_status;
+    @Enumerated(EnumType.STRING)
+    private Status device_status;
 
     @Column(nullable = false)
     private String device_model;
@@ -36,11 +39,11 @@ public class Device {
         this.device_name = device_name;
     }
 
-    public String getDevice_status() {
+    public Status getDevice_status() {
         return device_status;
     }
 
-    public void setDevice_status(String device_status) {
+    public void setDevice_status(Status device_status) {
         this.device_status = device_status;
     }
 
