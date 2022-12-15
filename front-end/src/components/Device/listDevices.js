@@ -29,13 +29,15 @@ const ListDevices = () => {
         <div className="table-container">
             <h2>Devices</h2>
             <hr/>
-            <Table striped hover className="table-wrapper">
+            <Table striped hover>
                 <thead>
                     <tr>
                         <th>Device Model</th>
                         <th>Device Name</th>
                         <th>Device Status</th>
                         <th>Enrolled Time</th>
+                        <th></th>
+                        <th></th>
                     </tr>
                 </thead>
                 <tbody>

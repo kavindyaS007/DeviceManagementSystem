@@ -49,7 +49,7 @@ const DeviceForm = (props) => {
                         <ErrorMessage name="enrolled_time" className="d-block invalid-feedback" component="span"/>
                     </FormGroup>
                     <br/>
-                    <Button variant="success" size="lg" block="block" type="submit">{props.children}</Button>
+                    <Button variant="success" size="md" block="block" type="submit">{props.children}</Button>
                 </Form>
             </Formik>
         </div>

@@ -18,7 +18,7 @@ const AddDevice = () => {
                 Promise.reject()
             }
         })
-        .catch(err => console.log(err))
+        .catch(err => alert("Something went wrong"))
     }
 
     return (

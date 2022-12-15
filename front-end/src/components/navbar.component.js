@@ -8,7 +8,7 @@ import { Link } from "react-router-dom";
 
 const NavbarComponent = () => {
     return (
-            <Navbar bg="dark" variant="dark">
+            <Navbar className="navbar" bg="dark" variant="dark">
                 <Container>
                     <Navbar.Brand>
                         <Link to={"/"} className="nav-link">Device Management System</Link>

@@ -1,12 +1,13 @@
 /* add-device */
 .form-wrapper {
     margin-top: 5px;
-    padding: 25px 15%;
+    padding: 25px 5%;
 }
 
 /* list-device */
 .table-container {
     margin-top: 5px;
+    padding: 25px 5%;
 }
 
 .table-wrapper {
@@ -18,4 +19,12 @@ h2 {
     font-size: 25px;
     color: rgba(55, 48, 48, 0.77);
     text-align: center;
+}
+
+.button{
+    color: white;
+}
+
+.button:hover {
+    color: white;
 }

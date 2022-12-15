@@ -1,22 +1,38 @@
+import axios from "axios";
 import React from "react";
 import { Button } from "react-bootstrap";
-import { Link } from "react-router-dom";
 
 const SingleDevice = (props) => {
-    console.log(props.obj);
-    const {id, model, name, status, time} = props.obj;
-    console.log(props.obj.device_model);
+    const {device_id, device_model, device_name, device_status, enrolled_time} = props.obj;
+
+    const deleteDevice = () => {
+        axios.delete(
+            "http://localhost:8080/delete-device/" + device_id
+        ).then((res) => {
+            if(res.status === 200) {
+                alert("Device deleted successfully");
+                window.location.reload();
+            }
+            else{
+                Promise.reject();
+            }
+        })
+        .catch((err) => alert("Something went wrong"));
+    };
+
     return (
         <tr>
-            <td>{model}</td>
-            <td>{name}</td>
-            <td>{status}</td>
-            <td>{time}</td>
+            <td>{device_model}</td>
+            <td>{device_name}</td>
+            <td>{device_status}</td>
+            <td>{enrolled_time}</td>
             <td>
-                <Link className="" to={"/edit-device/" + id}>
+                <Button className="button" size="sm" variant="warning" href={"/edit-device/" + device_id}>
                     Edit
-                </Link>
-                <Button size="sm" variant="danger">
+                </Button>                           
+            </td>
+            <td>
+                <Button onClick={deleteDevice} className="button" size="sm" variant="danger">
                     Delete
                 </Button>
             </td>
