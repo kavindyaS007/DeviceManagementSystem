@@ -4,6 +4,7 @@ import com.kavindya.DeviceMngSystem.Model.Enum.Status;
 
 import javax.persistence.*;
 import java.sql.Time;
+import java.time.LocalTime;
 
 @Entity
 @Table(name = "Device_table")
@@ -25,7 +26,7 @@ public class Device {
     private String device_model;
 
     @Column
-    private Time enrolled_time;
+    private LocalTime enrolled_time;
 
     public Device() {
 
@@ -55,11 +56,11 @@ public class Device {
         this.device_model = device_model;
     }
 
-    public Time getEnrolled_time() {
+    public LocalTime getEnrolled_time() {
         return enrolled_time;
     }
 
-    public void setEnrolled_time(Time enrolled_time) {
+    public void setEnrolled_time(LocalTime enrolled_time) {
         this.enrolled_time = enrolled_time;
     }
 

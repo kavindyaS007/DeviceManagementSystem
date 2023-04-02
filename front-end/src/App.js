@@ -8,6 +8,7 @@ import NavbarComponent from './components/navbar.component';
 import Home from './components/Home';
 import AddDevice from './components/Device/addDevice';
 import ListDevices from './components/Device/listDevices';
+import EditDevice from "./components/Device/editDevice";
 
 function App() {
   return (
@@ -24,6 +25,7 @@ function App() {
                 <Route exact path='/' element={<Home/>} />
                 <Route path='/devices' element={<ListDevices/>} />
                 <Route path='/add-device' element={<AddDevice/>} />
+                <Route path='/edit-device/:device_id' element={<EditDevice/>} />
               </Routes>
             </div>
           </Col>
