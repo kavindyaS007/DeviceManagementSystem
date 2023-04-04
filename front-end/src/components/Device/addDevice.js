@@ -5,7 +5,7 @@ import "bootstrap/dist/css/bootstrap.css"
 
 const AddDevice = () => {
 
-    const [formValues, setFormValues] = useState({device_model: '', device_name: '', device_status: '', enrolled_time: ''})
+    const [formValues] = useState({device_model: '', device_name: '', device_status: '', enrolled_time: ''})
     const onSubmit = deviceObject => {
         axios.post(
             "http://localhost:8080/add-device", deviceObject

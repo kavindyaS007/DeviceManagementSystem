@@ -11,13 +11,18 @@ const DeviceForm = (props) => {
         device_model: Yup.string().required("Required"),
         device_name: Yup.string().required("Required"),
         device_status: Yup.string().required("Required"),
-        enrolled_time: Yup.string().required("Required"),
+        // enrolled_time: Yup.string().required("Required"),
     });
-    console.log(props);
+
+    const handleSubmit = (values, { setSubmitting }) => {
+        values.enrolled_time = new Date().toLocaleTimeString([], {hour: '2-digit', minute:'2-digit', second:'2-digit', hour12: false});
+        props.onSubmit(values);
+        setSubmitting(false);
+      };
 
     return (
         <div className="form-wrapper">
-            <Formik {...props} validationSchema={validationSchema}>
+            <Formik {...props} validationSchema={validationSchema} onSubmit={handleSubmit}>
                 <Form>
                     <FormGroup>
                         <label>Device Model</label>
@@ -41,12 +46,6 @@ const DeviceForm = (props) => {
                             <option value="ENROLLED">ENROLLED</option>
                         </Field>
                         <ErrorMessage name="device_status" className="d-block invalid-feedback" component="span"/>
-                    </FormGroup>
-                    <br/>
-                    <FormGroup>
-                        <label>Enrolled Time</label>
-                        <Field name="enrolled_time" type="Time" className="form-control" />
-                        <ErrorMessage name="enrolled_time" className="d-block invalid-feedback" component="span"/>
                     </FormGroup>
                     <br/>
                     <Button variant="success" size="md" block="block" type="submit">{props.children}</Button>
