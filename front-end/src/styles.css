@@ -1,6 +1,6 @@
 /* add-device */
 .form-wrapper {
-    margin-top: 5px;
+    margin: 0 5px;
     padding: 25px 5%;
 }
 
@@ -8,11 +8,28 @@
 .table-container {
     margin-top: 5px;
     padding: 25px 5%;
+    width: 100%;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
 }
 
-.table-wrapper {
-    margin-top: 25px;
-    color: rgb(1, 1, 28);
+hr {
+    width: 100%;
+}
+
+.device-page-title {
+    width: 100%;
+    margin-bottom: 0%;
+}
+
+.search-container {
+    width: 100%;
+    color: gray;
+    justify-content: center;
+    height: fit-content;
+    padding: 2%;
+    align-items: center;
 }
 
 h2 {
@@ -21,10 +38,40 @@ h2 {
     text-align: center;
 }
 
-.button{
+.button,
+.button:hover {
     color: white;
 }
 
-.button:hover {
-    color: white;
+.device-count {
+    width: 66%;
+}
+
+.device-count p {
+    margin: auto;
+}
+
+.device-search-bar {
+    border-bottom: 1px solid gray;
+    width: 30%;
+    padding: 1%;
+    color: gray;
+    align-items: center;
+}
+
+.device-search-icon {
+    width: 10%;
+    padding-right: 1%;
+}
+
+.device-search-input,
+.device-search-input input[type="text"]::placeholder {
+    width: 89%;
+    border: none;
+    outline: none;
+    color: gray;
+}
+
+.device-table {
+    width: 100%;
 }
