@@ -8,12 +8,15 @@ Front-end : ReactJs
 Database  : MySQL
 
 ## Features ;
-  1)  Add a device (with id, model, name, status, enrolled time)
-      ** Status should be - "ENROLLED" or "ACTIVE" or "INACTIVE"
-  3)  View all devices
-  4)  View a device by Id
-  5)  Update a device
-  6)  Delete a device
+  1)  Add a device (with id, model, name, status, enrolled time)  
+      ** Status should be - "ENROLLED" or "ACTIVE" or "INACTIVE"  
+  3)  View all devices  
+      i)    Display all the devices in a table  
+      ii)   Devices can be filtered by searching them using 'Device Name', 'Device Model' and 'Device Status'  
+      iii)  Filtered device count is display  
+  4)  View a device by Id  
+  5)  Update a device  
+  6)  Delete a device  
   
 ## to Run;
 
